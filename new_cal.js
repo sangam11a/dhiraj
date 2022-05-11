@@ -38,7 +38,7 @@ function getOpertorClicked(id){
     }
     else{
         c=arr.push(document.getElementById("output").value)
-        alert(arr)
+        // alert(arr)
         displayVal=""
         refactor();
         tot(arr)
@@ -47,7 +47,7 @@ function getOpertorClicked(id){
 }
 function refactor(){
     var rrr=arr[arr.length-2]
-    alert(rrr)
+    // alert(rrr)
     if(rrr=="*"||rrr=="/"){
         let g=Number(arr[arr.length-1])*Number(arr[arr.length-3])
         let h=Number(arr[arr.length-3])/Number(arr[arr.length-1])
@@ -57,12 +57,12 @@ function refactor(){
             i++
         }
         if(rrr=="*"){
-            arr.push(g)
+            arr.push(String(g))
         }
         else{
-            arr.push(h)
+            arr.push(String(h))
         }
-        alert(arr)
+        // alert(arr)
     }
 }
 function tot(vc){
@@ -72,7 +72,7 @@ var sub1=[];
 sub1=vc
 console.log(sub1[1])
     // for(i=0;i<sub1.length;i++)
-    {
+   if(arr.length!=0) {
         // if(sub1.length>2)
         if(sub1[1]=="+"||sub1[1]=="-")
         {        
@@ -81,21 +81,39 @@ console.log(sub1[1])
             {
                 switch(sub1[1]){
                     case '+':calc=Number(sub1[0])+Number(sub1[2]);
-                    alert(calc)
+                    // alert(calc)
                              break;
                     case '-':
                                 calc=Number(sub1[0])-Number(sub1[2]);
-                                alert(calc)
+                                // alert(calc)
                                 break;
                 }
                 sub1=sub1.slice(3)
                 sub1.unshift(String(calc))
-                // alert(calc+"::"+sub1)
+                alert(calc+"::"+sub1)
                 tot(sub1)
             }
         }
         else{
-            alert("result is"+sub1)
+            // if(arr.length!=0)
+            {
+            arr=[]
+            console.log(arr)
+            displayVal=sub1[0]
+            document.getElementById("output").value=displayVal
+            }
         }
     }
+    else{
+        document.getElementById("output").value="0"
+    }
 }
+function clearall(){
+    clear1();
+    arr=[]
+}
+function clear1(){
+    document.getElementById("output").value=" "
+    displayVal= " "
+}
+
