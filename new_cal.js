@@ -50,7 +50,7 @@ function refactor(){
     alert(rrr)
     if(rrr=="*"||rrr=="/"){
         let g=Number(arr[arr.length-1])*Number(arr[arr.length-3])
-        let h=Number(arr[arr.length-1])/Number(arr[arr.length-3])
+        let h=Number(arr[arr.length-3])/Number(arr[arr.length-1])
         let i=0
         while(i<=2){
             arr.pop()
