@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+    <head ><title>calculator</title>
+        <!-- <link rel="stlesheet" href="bootstrap.min.css">
+        <script src="jquery.min.js"></script>
+        <link rel="stylesheet" href="style.css"> -->
+     
+        <script src="new_cal.js" ></script>
+        
+    </head>
+    <body>
+        
+        
+        
+        <div class="calculator">
+            <h1>calculator</h1>
+            <span id="val1"></span>
+            <input type="text" name="cal" class="display" id="output"/>
+            
+            <div >
+                <button type="button" id="add" class="operaterdesign " value="+" onclick="getOpertorClicked('add')">+</button>
+                <button type="button" id="sub" class="operaterdesign" value="-" onclick="getOpertorClicked('sub')">-</button>
+                <button type="button" id="multi" class="operaterdesign" value="*" onclick="getOpertorClicked('multi')">*</button>
+                <button type="button" id="divi" class="operaterdesign" value="/" onclick="getOpertorClicked('divi')">/</button>
+            </div>
+            
+            <div>
+                <button type="button" id="one" class="btn " value="1" onclick="getNumberClicked('one')" >1</button>
+                <button type="button" id="two" class="btn " value="2" onclick="getNumberClicked('two')">2</button>
+                <button type="button"  id="three" class="btn "value="3" onclick="getNumberClicked('three')">3</button>
+                <button type="button" id="four" class="btn " value="4" onclick="getNumberClicked('four')">4</button>
+            </div>
+        
+        
+            <div>
+                <button type="button" id="five"class="btn " value="5" onclick="getNumberClicked('five')">5</button>
+                <button type="button" id="six" class="btn " value="6" onclick="getNumberClicked('six')">6</button>
+                <button type="button" id="seven" class="btn "value="7" onclick="getNumberClicked('seven')">7</button>
+                <button type="button" id="eight" class="btn " value="8" onclick="getNumberClicked('eight')">8</button>
+            </div>
+        
+            <div>
+                <button type="button" id="nine" class="btn "value="9" onclick="getNumberClicked('nine')">9</button>
+                <button type="button" id="zero" class="btn"value="0" onclick="getNumberClicked('zero')">0</button>
+                <button type="button" id="dot" class="btn " value="." onclick="getNumberClicked('dot')">.</button>
+                <button type="button" id="clear" class="btn "value="c" onclick="getNumberClicked('clear')">clear</button>
+            </div>
+        
+        
+            <div>
+                <button type="button"  id="equal" class="equal" value="=" onclick="getOpertorClicked('equal')">=</button>
+                <button type="button"id="allclear" class="allclear " value='' onclick="getOpertorClicked('allclear')">allclear</button>
+            </div>
+        </div>
+     
+
+       
+
+    </body>
+</html>
